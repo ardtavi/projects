@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="100.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.parking.controller.LoginController">
+    <children>
+        <Label fx:id="label" layoutX="264.0" layoutY="348.0" text="POLI ROCKS!!" visible="false" />
+        <Button fx:id="login" layoutX="200.0" layoutY="294.0" mnemonicParsing="false" onAction="#login" text="Login" />
+        <PasswordField fx:id="password" layoutX="180.0" layoutY="230.0" />
+        <TextField fx:id="username" layoutX="180.0" layoutY="175.0" text="Tavi" />
+      <Label fx:id="labelUsernam" layoutX="50.0" layoutY="170.0" text="Username" visible="true">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <Label fx:id="labelPassword" layoutX="50.0" layoutY="220.0" text="Password" visible="true">
+            <font>
+                <Font size="22.0" />
+            </font></Label>
+    </children>
+</AnchorPane>

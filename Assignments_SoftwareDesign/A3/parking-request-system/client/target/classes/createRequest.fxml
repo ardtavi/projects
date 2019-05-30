@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="root" prefHeight="291.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.parking.controller.RequestController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="98.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.0" minWidth="10.0" prefWidth="248.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="189.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="36.0" prefHeight="60.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+       
+        <Label text="Year" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+            </GridPane.margin>
+        </Label>
+
+
+      <Button fx:id="ok" mnemonicParsing="false" prefHeight="52.0" prefWidth="255.0" text="CREATE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="year" alignment="CENTER" prefHeight="31.0" prefWidth="239.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+        </TextField>
+      <Label prefHeight="21.0" prefWidth="151.0" text="Create request" />
+      <TextField fx:id="car" alignment="CENTER" layoutX="67.0" layoutY="128.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label alignment="CENTER_RIGHT" layoutX="28.0" layoutY="88.0" prefHeight="21.0" prefWidth="102.0" text="Car" GridPane.rowIndex="2" />
+      <Button fx:id="back" layoutX="58.0" layoutY="252.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="59.0" text="Back" GridPane.rowIndex="3" />
+
+        <!--<Button mnemonicParsing="false" ButtonBar.ButtonData="OK_DONE" text="OK" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.vgrow="NEVER">-->
+        <!--<GridPane.margin>-->
+        <!--<Insets right="10.0"/>-->
+        <!--</GridPane.margin>-->
+        <!--</Button>-->
+        <!--<Button mnemonicParsing="false" text="Cancel" ButtonBar.ButtonData="CANCEL_CLOSE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.vgrow="NEVER">-->
+        <!--<opaqueInsets>-->
+        <!--<Insets/>-->
+        <!--</opaqueInsets>-->
+        <!--<GridPane.margin>-->
+        <!--<Insets left="10.0"/>-->
+        <!--</GridPane.margin>-->
+        <!--</Button>-->
+
+    </children>
+
+</GridPane>
