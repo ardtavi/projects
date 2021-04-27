@@ -1,0 +1,59 @@
+version: "3.0"
+
+services:
+
+  app-client:
+    build:
+      context: utcn_dsrl-react-js-example-4b453ff0a365 # Use an image built from the specified dockerfile in the `polling-app-client` directory.
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000 # Map the exposed port 80 on the container to port 9090 on the host machine
+    depends_on:
+      - api
+    networks:
+      - frontend  
+    links:
+      - api
+
+  api:
+    build: 
+      context: utcn_dsrl-spring-boot-demo-d3d64f8621f6
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+
+    depends_on:
+      - db
+    environment: # Pass environment variables to the service
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/spring-demo3
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: example
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - backend
+      - frontend
+    links:
+      - db
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: spring-demo3
+      MYSQL_USER: root
+      MY_SQL_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+      
+
+networks:
+  backend:
+  frontend:
+
+
+volumes:
+  db-data:

@@ -1,0 +1,10 @@
+<gs:getActivitiesRequest xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+  <!--1 or more repetitions:-->
+  <gs:activities>
+    <gs:patient_id>3</gs:patient_id>
+    <gs:startTime>string</gs:startTime>
+    <gs:endTime>string</gs:endTime>
+    <gs:activityLabel>string</gs:activityLabel>
+    <gs:id>3</gs:id>
+  </gs:activities>
+</gs:getActivitiesRequest>

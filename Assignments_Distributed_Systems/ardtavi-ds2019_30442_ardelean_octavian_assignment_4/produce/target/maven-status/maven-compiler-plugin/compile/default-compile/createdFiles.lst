@@ -1,0 +1,15 @@
+hello\ActivitiesRepository.class
+hello\ActivitiesEndpoint.class
+hello\ConnectionFactory.class
+hello\WebServiceConfig.class
+io\spring\guides\gs_producing_web_service\ObjectFactory.class
+io\spring\guides\gs_producing_web_service\Activity.class
+io\spring\guides\gs_producing_web_service\GetActivitiesResponse.class
+io\spring\guides\gs_producing_web_service\GetActivitiesRequest.class
+hello\DbUtil.class
+hello\ActivityEndpoint.class
+hello\ActivityRepository.class
+hello\Patient_sensor.class
+io\spring\guides\gs_producing_web_service\package-info.class
+hello\Application.class
+hello\Patient_sensorDAO.class

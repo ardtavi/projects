@@ -1,0 +1,49 @@
+<!DOCTYPE xs:schema [
+        <!ELEMENT xs:schema (xs:complexType|xs:element)*>
+        <!ATTLIST xs:schema
+                xmlns:xs CDATA #REQUIRED
+                xmlns:tns CDATA #REQUIRED
+                targetNamespace CDATA #REQUIRED
+                elementFormDefault CDATA #REQUIRED>
+        <!ELEMENT xs:complexType (xs:sequence)*>
+        <!ATTLIST xs:complexType
+                name CDATA #IMPLIED>
+        <!ELEMENT xs:sequence (xs:element)*>
+        <!ELEMENT xs:element (xs:complexType)*>
+        <!ATTLIST xs:element
+                maxOccurs CDATA #IMPLIED
+                name CDATA #REQUIRED
+                type CDATA #IMPLIED>
+        ]>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+
+    <xs:complexType name="activity">
+        <xs:sequence>
+            <xs:element name="patient_id" type="xs:int"/>
+            <xs:element name="startTime" type="xs:string"/>
+            <xs:element name="endTime" type="xs:string"/>
+            <xs:element name="activityLabel" type="xs:string"/>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getActivitiesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="activities" maxOccurs="unbounded" type="tns:activity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getActivitiesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="activities" maxOccurs="unbounded" type="tns:activity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
